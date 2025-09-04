@@ -1,13 +1,45 @@
-function x() {
-    var a = 10;
-    function y() {
-        console.log(a) 
-    }
+// function x() {
+//     var a = 10;
+//     function y() {
+//         console.log(a)
+//     }
 
-    return y;
-}
+//     return y;
+// }
 
-var z = x()
-console.log(z) 
+// var z = x()
+// console.log(z)
 
 // console.log(x()())
+
+//****************** Clouser + setTimeout ********************/
+
+// function x(){
+//     for(var i=1; i<=5; i++){
+//         setTimeout(function (){
+//             console.log(i)
+//         }, i * 1000)
+//     }
+// }
+// x()
+
+// function x(){
+//     for(let i=1; i<=5; i++){
+//         setTimeout(function (){
+//             console.log(i)
+//         }, i * 1000)
+//     }
+// }
+// x()
+
+function x() {
+  for (var i = 1; i <= 5; i++) {
+    function close(x) {
+      setTimeout(function () {
+        console.log(x);
+      }, x * 1000);
+    }
+    close(i)
+  }
+}
+x();
