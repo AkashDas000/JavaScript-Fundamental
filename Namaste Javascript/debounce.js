@@ -8,7 +8,6 @@ function mydebounce(call, d){
     let timmer;
     return function(...args){
         if(timmer) clearTimeout(timmer)
-                
         timmer = setTimeout(() => {
             call()
         }, d)
