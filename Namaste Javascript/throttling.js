@@ -8,7 +8,9 @@ const myThrottling = (fn, d) => {
 };
 
 const newFunc = myThrottling(() => {
-  document.getElementById("btn").disabled = false;
+  document.getElementById("btn").disabled
+  
+  = false;
 
   console.log("user clicked");
 }, 3000);

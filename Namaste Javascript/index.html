@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
     <h1>Namaste JavaScript</h1>
-    <input type="text" onkeyup="betterFunction()"/>
-    <button id="btn" onclick="newFunc()">Submit</button>
-    <script src="throttling.js"></script>
+    <!-- <input type="text" onkeyup="betterFunction()"/>
+    <button id="btn" onclick="newFunc()">Submit</button> -->
+    <div id="GrandParent">
+        <p>Grand Parent</p>
+        <div id="parent">
+            <p>Parent</p>
+            <div id="child">
+                <p>Child</p>
+            </div>
+        </div>
+    </div>
+    <script src="event_bubbling.js"></script>
 </body>
 </html>
